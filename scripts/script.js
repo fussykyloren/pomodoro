@@ -46,7 +46,7 @@ function breakTimeDown() {
     else {
         breakTime.textContent = Number(1);
     }
-}l
+};
 
 function breakTimeUp() {
     if(breakTime.textContent < Number('60')) {
@@ -54,12 +54,19 @@ function breakTimeUp() {
     }
 };
 
+function resetButtonEventListeners() {
+    sessionTimerDown.addEventListener("click", sessionTimeDown);
+    sessionTimerUp.addEventListener("click", sessionTimeUp);
+    breakTimerDown.addEventListener("click", breakTimeDown);
+    breakTimerUp.addEventListener("click", breakTimeUp);
+}
+
 function playTimer() {
     timer = displayTime.textContent;
     minutes = timer.slice(0, timer.indexOf(":"));
     seconds = timer.slice(timer.indexOf(":") + 1);
     timerOn = setInterval(function() {
-        if(minutes = "0" && seconds = "00") {
+        if(minutes == "0" && seconds == "01") {
               if(timerMode == "session") {
                   timerMode = "break";
                   minutes = breakTime.textContent;
@@ -81,6 +88,9 @@ function playTimer() {
         }
         else {
             seconds--;
+            if (seconds < Number("10")) {
+                seconds = "0" + seconds;
+            }
         }
         
         displayTime.textContent = minutes + ":" + seconds;
@@ -97,21 +107,38 @@ function pauseButtonClicked() {
     playButton.addEventListener("click", playTimer, once);
 }
 
+function eventListenerRefresh() {
+    clearInterval(timerOn);
+    playButton.addEventListener("click", playTimer, once);
+    resetButtonEventListeners();
+}
+
 function stopButtonClicked() {
     if(timerMode == "session") {
-        min = sessionTime.textContent;
-        sec = "00";
-        timerText.textContent = minutes + ":" + seconds;
+        minutes = sessionTime.textContent;
+        seconds = "00";
+        displayTime.textContent = minutes + ":" + seconds;
     }
     else if (timerMode == "break") {
         timerMode == "session";
+        minutes == sessionTime.textContent;
+        seconds = "00";
+        displayTime.textContent = minutes + ":" + seconds;
+        displayTitle.textContent = "Session";
     }
+    eventListenerRefresh();
 }
 
-sessionTimerDown.addEventListener("click", sessionTimeDown);
-sessionTimerUp.addEventListener("click", sessionTimeUp);
-breakTimerDown.addEventListener("click", breakTimeDown);
-breakTimerUp.addEventListener("click", breakTimeUp);
+function restartButtonClicked() {
+    sessionTime.textContent = "25";
+    breakTime.textContent = "5";
+    displayTime.textContent = sessionTime.textContent + ":00";
+    displayTitle.textContent = "Session";
+    eventListenerRefresh();
+}
 
+resetButtonEventListeners();
 playButton.addEventListener("click", playTimer, once);
-pauseButton.addEventListener("click", pauseButtonClicked)
+pauseButton.addEventListener("click", pauseButtonClicked);
+stopButton.addEventListener("click", stopButtonClicked);
+restartButton.addEventListener("click", restartButtonClicked);
