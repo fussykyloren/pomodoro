@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+</head>
+<body>
+    <h1 id="title">
+        <span>Pomodoro Clock</span>
+    </h1>
+    <div id="timerSettings">
+        <div class="session">
+            <h2>Session</h2>
+            <button id="sessionTimerDown">
+                <i class="material-icons">
+                    keyboard_arrow_down
+                </i>
+            </button>
+            <span id="sessionTime">25</span>
+            <button id="sessionTimerUp">
+                <i class="material-icons">
+                    keyboard_arrow_up
+                </i>
+            </button>
+        </div>
+        <div class="break">
+            <h2>Break</h2>
+            <button id="breakTimerDown">
+                <i class="material-icons">
+                    keyboard_arrow_down
+                </i>
+            </button>
+            <span id="breakTime">25</span>
+            <button id="breakTimerUp">
+                <i class="material-icons">
+                    keyboard_arrow_up
+                </i>
+            </button>
+        </div>
+    </div>
+    <div id="clock">
+        <div id="play-restart">
+            <button id="playButton">
+                <i class="material-icons play">
+                    play_arrow
+                </i>
+            </button>
+            <button id="restartButton">
+                <i class="material-icons play">
+                    replay
+                </i>
+            </button>
+        </div>
+        <div id="display">
+            <h2 id="displayTitle">Session</h2>
+            <span id="displayTime">25:00</span>
+        </div>
+        <div id="pause-stop">
+            <button id="pauseButton">
+                <i class="material-icons play">
+                    pause
+                </i>
+            </button>
+            <button id="stopButton">
+                <i class="material-icons play">
+                    stop
+                </i>
+            </button>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <footer>
+        
+    </footer>
+</body>
+</html>

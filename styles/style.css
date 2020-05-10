@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap')
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+}
+
+#timerSettings {
+    display: flex;
+    margin: 40px auto;
+    background-color: burlywood;
+    width: 500px;
+    height: 120px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#session, #break {
+    padding: 20px;
+    width: 50%;
+}
+
+#session > *, #break > * {
+    padding: 8px;
+    font-size: 36px;
+}
+
+#clock {
+    display: flex;
+    margin: 30px auto;
+    background-color: burlywood;
+    width: 400px;
+    height: 220px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+#display {
+    
+}
+
+#play-restart, #pause-stop {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
