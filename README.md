@@ -1,9 +1,9 @@
 # Pomodoro
 ## Table of Contents
-[**Information**](https://github.com/fussykyloren/pomodoro#information)
-[**Project Status**]()
-[**Instructions**](https://github.com/fussykyloren/pomodoro#instructions)
-[**Website**](https://github.com/fussykyloren/pomodoro#website)
+- [**Information**](https://github.com/fussykyloren/pomodoro#information)
+- [**Project Status**](https://github.com/fussykyloren/pomodoro/blob/master/README.md#project-status)
+- [**Instructions**](https://github.com/fussykyloren/pomodoro#instructions)
+- [**Website**](https://github.com/fussykyloren/pomodoro#website)
 ## Information
 In this project, a calculator is implemented using Javascript. This project is part of The Odin Project Javascript curriculum. The project information can be found [here](https://www.theodinproject.com/courses/web-development-101/lessons/pairing-project).
 ## Project Status
