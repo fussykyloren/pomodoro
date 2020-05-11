@@ -7,7 +7,7 @@
 ## Information
 In this project, a calculator is implemented using Javascript. This project is part of The Odin Project Javascript curriculum. The project information can be found [here](https://www.theodinproject.com/courses/web-development-101/lessons/pairing-project).
 ## Project Status
-The project at this time is *finished*.
+At this time, the project is *finished*.
 ## Instructions
 According to [Wikipedia](https://en.wikipedia.org/wiki/Pomodoro_Technique), there are six steps to the pomodoro technique.
 1. Decide on the task to be done.
